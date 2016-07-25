@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 8 - Part 2: Tabbed Menu Bar</title>
+            <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+            <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <main>
+           <div>
+                <nav>
+                    <ul>
+                        <li>Learning Outcomes</li>
+                        <li>Learning Modules</li>
+                        <li>Instructor Bio</li>
+                    </ul>
+                </nav>
+                <section>
+                    <article id="learning">
+                        <h4>Learning Outcomes</h4>
+                    Lorem ipsum dolor sit amet, cum evertitur neglegentur id. Sit decore tamquam liberavisse at, eu vis dicta aeterno lucilius. Imperdiet euripidis te vim, ne dicant inimicus per, et imperdiet dignissim pro. Est at probo justo adipiscing, an ius possim impetus virtute, mea no novum animal. Affert graeci ne pri, ei ridens quodsi patrioque vis, vis id illud liber consequat. Copiosae ponderum electram et vel, ut facete efficiantur eam. Rebum urbanitas id sea, rebum altera cotidieque et ius.</article>
+                    <article id="modules">
+                        <h4>Learning Modules</h4>
+                    Simul melius aperiam et mel. Per equidem referrentur ne, ne mazim nonumes per. Mazim dictas timeam vix at, duo esse perpetua cotidieque ad, quo ei case vidisse. Probatus contentiones in pri. Duo paulo dolore efficiendi te. Postea eripuit philosophia ut quo, his ex saepe possit graeco, accusata sapientem eum ad.</article>
+                    <article id="instrutor">
+                        <h4>Instructor: Zak Ruvalcaba</h4>
+                   Per omnes melius voluptatibus id, id graece volutpat mel. Mel ei graeci debitis, sed saperet pericula rationibus eu. Et eum ponderum invidunt expetenda, an meis graeco persequeris qui, iusto pertinax eu his. Vis ea graeco scripserit. Est eruditi invenire te, veritus alienum placerat eos ei.
+    Melius imperdiet consetetur id duo, nulla audire ius ad, usu eu nulla theophrastus. Per ea eros alienum. Aeque hendrerit ad pro. Ad mel animal nonumes senserit, id nam lorem accommodare definitiones, sit purto evertitur reformidans ex.</article>
+                </section>
+            </div>
+        </main>
+        
+        <script>
+        $(document).ready(function() {
+            $("#modules").hide();
+            $("#instrutor").hide();
+            $("li:first-child").addClass("clear");
+            
+            $("li:first-child").on("click", function() {
+                $("li:first-child").addClass("clear");
+                $("li:not(:first-child)").removeClass("clear");
+                $("#learning").show();
+                $("#modules").hide();
+                $("#instrutor").hide();
+                
+            });
+            
+            $("li:nth-child(2)").on("click", function() {
+                $("li:nth-child(2)").addClass("clear");
+                $("li:not(:nth-child(2))").removeClass("clear");
+                $("#learning").hide();
+                $("#modules").show();
+                $("#instrutor").hide();
+            });
+            
+            $("li:last-child").on("click", function() {
+                $("li:last-child").addClass("clear");
+                $("li:not(:last-child)").removeClass("clear");
+                $("#learninginstrutor").hide();
+                $("#modules").hide();instrutor
+                $("#instrutor").show();
+            });
+        });
+        </script>
+    </body>
+</html>

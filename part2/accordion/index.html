@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 8 - Part 2: Accordion</title>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <main>
+            <section>
+                <div id="one" class="noActiveDiv">
+                    <div class="icon-plus"></div>
+                    <h4>Why Vectacorp?</h4> 
+                </div>
+                <p id="paraOne">
+                    Lorem ipsum dolor sit amet, euismod facilis officiis ius an. Mea eu cetero adipisci qualisque. Mei brute mediocrem ut, mel vidit tibique ne. Cu sea dolore populo constituto. Oratio abhorreant pro ne. Eu vel legere blandit, noluisse recteque voluptatum ad vel.
+                </p>
+            </section>
+            <section>
+                <div id="two" class="noActiveDiv">
+                   
+                    <div class="icon-plus"></div>
+                    <h4>Apply</h4>
+                </div>
+                <p id="paraTwo">
+                    At sint error vis, vis id graeci option. Movet primis labitur cu usu, te pro noluisse temporibus. Ei verear fabulas ullamcorper ius, vis ut illud senserit scribentur. Vim eu unum sale semper, ut omittam moderatius accommodare his. Ius et dolore pertinax, ut cum persius constituto. Sea eros possim consequuntur et. Ad utinam honestatis philosophia his, ius fuisset mandamus comprehensam ut.
+                </p>
+            </section>
+            <section>
+                <div id="three" class="noActiveDiv">
+                    <div class="icon-plus"></div>
+                    <h4>Take Assessments</h4>
+                </div>
+                
+                <p id="paraThree">
+                   Ut iisque maiestatis eam, sea ubique delectus sententiae ei, ea alia evertitur vis. Vix no omnis similique, eros labores ius ut, nam perfecto sapientem quaerendum in. Duo ludus regione eu, idque officiis eum eu, sit ne diam erant perpetua. Est ne alienum facilisis, ne pro veri imperdiet. Pri ei dolore appetere, erat legendos lobortis duo in, per veniam aliquando persecuti at.
+                </p>
+            </section>
+        </main>
+        
+        
+        <script>
+        $(document).ready(function() {
+            $("p").hide();
+            
+            $("div").on("click", function() {
+               if ($(this).hasClass("noActiveDiv")) {
+                   $(this).siblings("p").slideDown();
+                   $("div", this).removeClass("icon-plus").addClass("icon-minus");
+                   $(this).removeClass("noActiveDiv").addClass("activeDiv");
+                } else if ($(this).hasClass("activeDiv")) {
+                    $(this).siblings("p").slideUp();
+                    $("div", this).removeClass("icon-minus").addClass("icon-plus");
+                    $(this).removeClass("activeDiv").addClass("noActiveDiv");
+                }
+           });
+        });
+        </script>
+    </body>
+</html>

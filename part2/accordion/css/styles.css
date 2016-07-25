@@ -1,0 +1,75 @@
+main {
+    width: 500px; 
+    height: 500px; 
+    margin: 20px auto;
+}
+            
+div h4 {
+    float: left;
+    font-family: Arial,sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 0;
+    margin: 20px 0 23px 15px;
+}
+
+.noActiveDiv {
+    background-color: #237862;
+    border-radius: 5px;
+    clear: both;
+    color: white;
+    display: block;
+    font-weight: 400;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.activeDiv {
+    background-color: #899b2c;
+    border-radius: 5px;
+    clear: both;
+    color: white;
+    display: block;
+    font-weight: 400;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+p {padding: 0;
+    display: block;
+}
+
+
+.icon-plus, .icon-minus{
+    background: #104735 none repeat scroll 0 0;
+    border-radius: 50%;
+    float: left;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+    margin: 9px;
+}
+
+.icon-minus{
+    background: #4a5f0d none repeat scroll 0 0;
+    font-weight: bold;
+}
+
+.icon-plus::after {content: "+";}
+.icon-minus::after {content: "-";}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

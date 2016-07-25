@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment 8 - Part 1</title>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+    <input type="button" id="btn" value="Button 1">
+    <input type="button" id="btn2" value="Button 2">
+    <input type="button" id="btn3" value="Button 3"> 
+    <br><br>
+    <input type="button" id="btn4" value="Button 4A">
+    <input type="button" id="btn41" value="Button 4B"> 
+    <br><br>
+    <div id="div5" style="background-color:#444; font-size:1.5em; text-align:center;"></div>
+    <br><br>
+    <a href="http://www.google.com">Step 7 Link</a>
+    <br><br>
+    <div id="div8"></div>
+     <br><br>
+    <input id="textBox9" type="text" placeholder="Content goes here" style="border:1px solid #ccc; padding:5px">
+        <br><br>
+    <form>
+        <input id="name" type="text" placeholder="Name" style="border:1px solid #ccc; padding:5px">
+        <input id="email" type="text" placeholder="Email" style="border:1px solid #ccc; padding:5px">
+        <button id="submit" type="button" style="border:1px solid #ccc; padding:5px">Submit</button>
+    </form>
+
+   
+    <!--STEP 1 -->
+    <script>
+    $(document).ready(function() {
+        $("#btn").click(function() {
+            window.alert("Button was clicked");
+        });
+    });
+    </script>
+
+    <!--STEP 2 -->
+    
+   <script>
+    $(document).ready(function() {
+        $("#btn2").bind("click", function(event) {
+            window.alert("Button 2 was clicked");
+        });
+    });
+    </script>
+   
+    <!--STEP 3 -->
+    
+     <script>
+    $(document).ready(function() {
+        $("#btn3").on("click", function(event) {
+            window.alert("Button 3 was clicked");
+        });
+    });
+    </script>
+
+    <!--STEP 4  -->
+    
+     <script>
+    $(document).ready(function() {
+        $("#btn4, #btn41").on("click", function(event) {
+            window.alert("Button 4 was clicked");
+        });
+    });
+    </script>
+
+    <!--STEP 5 -->
+    
+    <script>
+    $(document).ready(function() {
+        $("#div5").width("400px").height("400px");
+        
+    /*    $("#step5div").on("click", function(event) {
+            window.alert("You clicked the div.");
+        });
+        
+        $("#step5div").on("mouseenter", function(event) {
+            window.alert("Your mouse entered the div.");
+        });
+        
+        $("#step5div").on("mouseleave", function(event) {
+            window.alert("The mouse has left the div.");
+        });*/
+    });
+    </script>
+
+    <!--STEP 6 -->
+    
+        <script>
+    $(document).ready(function() {
+        
+        $("#div5").append("<span></span>").css("color", "white");
+        
+        $("#div5").on("click", function(event) {
+            $("span").replaceWith("<span>You clicked the div.</span>");
+        });
+        
+        $("#div5").on("mouseenter", function(event) {
+            $("span").replaceWith("<span>Your mouse entered the div.</span>");
+        });
+        
+        $("#div5").on("mouseleave", function(event) {
+            $("span").replaceWith("<span>The mouse has left the div.</span>");
+        });
+        
+    });
+    </script>
+
+    <!--STEP 7 -->
+    
+    <script>
+    $(document).ready(function(event) {
+        $("a").on("click", function(event) {
+            event.preventDefault();
+            $("a").css("color", "red");
+            window.alert(event.currentTarget.nodeName);
+        })
+    });
+    </script>
+
+    <!--STEP 8 -->
+    
+    <script>
+    $(document).ready(function(event) {
+        $(window).resize(function() {
+            $("#div8").text("The Window Width: " + $(window).width());
+            $("#div8").append("<br>The Window Height: " + $(window).height());
+        });
+    });
+    </script>
+
+    <!--STEP 9 -->
+    
+    <script>
+    $(document).ready(function(event) {
+        $("#textBox9").focusin(function() {
+            $("#textBox9").css("background-color", "lightgrey");
+        })
+        $("#textBox9").focusout(function() {
+            $("#textBox9").css("background-color", "white");
+        })
+    });
+    </script>
+
+    <!--STEP 10 -->
+
+    <script>
+    $(document).ready(function(event) {
+        $("#submit").on("click", function() {
+            
+            if ($("#name").val().length === 0 && $("#email").val().length === 0) {
+                $("#name").css("border-color", "red");
+                $("#email").css("border-color", "red");
+                 window.alert("Please fill in the form before submitting");
+            } else if ($("#name").val().length === 0) {
+                $("#name").css("border-color", "red");
+                window.alert("Your name is required");
+            } else if ($("#email").val().length === 0) {
+                $("#email").css("border-color", "red");
+                window.alert("Your email is required");
+            } else {
+                $("#name").css("border-color", "green");
+                $("#email").css("border-color", "green");
+            }
+        })
+    });
+    </script>
+</body>
+
+</html>

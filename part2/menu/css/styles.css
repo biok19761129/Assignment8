@@ -1,0 +1,35 @@
+
+main {margin: 0px auto;
+    width: 960px;
+    height: 500px;
+    padding: 20px;
+    font-family: arial, sans-serif;
+    font-size: 0.8em;
+}
+
+div {border: solid 1px black;
+    background-color: clear;
+    height: 300px;}
+
+nav {list-style-type: none;}
+ul {padding-left: 20px;
+    background-color: #DBDBDB;
+    margin: 10px; border-radius: 5px;
+}
+
+li {list-style-type: none;
+    display: inline-block;
+    padding: 7px;
+    background-color: #EBEBEB;
+    margin: 10px -1px 0 0;
+    margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+section {margin: 10px;}
+
+h4 {margin-bottom: 10px;}
+
+.clear {background-color: #fff;
+    font-weight: bold;}
